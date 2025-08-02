@@ -1,0 +1,17 @@
+2025-07-26 06:49:29,348 - INFO - Whisper Vietnamese Evaluation Script
+2025-07-26 06:49:29,348 - INFO - ==================================================
+2025-07-26 06:49:29,349 - INFO - Python Version: 2.0.1+cpu
+2025-07-26 06:49:29,349 - INFO - PyTorch Version: 2.0.1+cpu
+2025-07-26 06:49:29,349 - INFO - CUDA Version: None
+2025-07-26 06:49:29,349 - INFO - ==================================================
+2025-07-26 06:49:29,350 - INFO - Using device: cpu
+2025-07-26 06:49:29,350 - INFO - CUDA available: False
+2025-07-26 06:49:29,350 - INFO - Loading Whisper medium model...
+2025-07-26 06:49:37,402 - INFO - Model loaded successfully!
+2025-07-26 06:49:37,402 - INFO - Starting dataset evaluation...
+2025-07-26 06:49:37,407 - INFO - Loaded dataset with 9 samples
+2025-07-26 06:49:37,417 - INFO - Processing file 1/9: common_voice_vi_30580094.mp3
+2025-07-26 06:49:58,595 - INFO - File: common_voice_vi_30580094.mp3
+2025-07-26 06:49:58,602 - INFO - CER: 0.6111, WER: 0.8333, RTF: 4.9267
+2025-07-26 06:49:58,602 - INFO - --------------------------------------------------------------------------------
+2025-07-26 06:49:58,603 - INFO - Processing file 2/9: common_voice_vi_28846908.mp3
