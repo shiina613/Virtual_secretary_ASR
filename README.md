@@ -1,6 +1,6 @@
-# 🧑‍💻 Ứng dụng Họp Trực Tuyến (Online Meeting App)
+# Huấn luyện mô hình Speech to Text cho ngôn ngữ tiếng Việt và ứng dụng vào hệ thống họp trực tuyến
 
-Ứng dụng họp trực tuyến giúp người dùng tạo và tham gia các cuộc họp video từ xa một cách dễ dàng và bảo mật. Hệ thống hỗ trợ gọi video nhóm, chia sẻ màn hình, nhắn tin thời gian thực và quản lý thành viên cuộc họp.
+Trong nghiên cứu này, chúng tôi xây dựng ứng dụng phòng họp trực tuyến có áp dụng mô hình Speech to Text (STT) để chuyển đổi nội dung cuộc họp sang văn bản. Để chức năng chuyển đổi sang văn bản của cuộc họp có độ chính xác cao, chúng tôi tiến hành đánh giá một số mô hình STT hỗ trợ tiếng Việt. Từ đó chúng tôi lựa chọn mô hình PhoWhisper (là mô hình tốt nhất) để tiếp tục fine-tune với bộ dữ liệu ViSpeech, đây là bộ dữ liệu phân biệt giọng vùng miền và giới tính. Chúng tôi sử dụng bộ dữ liệu Mozilla Common Voice 17 để đánh giá mô hình PhoWhisper trước và sau khi fine-tune. Chúng tôi thấy rằng sau khi fine-tune, mô hình mới cho kết quả là 10.34% với độ đo WER, thấp hơn nhiều so với mô hình PhoWhisper gốc (cho kết quả 37.04% với độ đo WER). Hệ thống phòng họp trực tuyến của chúng tôi đã được triển khai trên máy chủ với nhiều chức năng và cho kết quả chuyển đổi giọng nói sang văn bản có chất lượng tốt.
 
 ## LINK: https://virtualsecretary.click/
 
@@ -27,33 +27,28 @@
 - **Xác thực**: JWT
 - **Triển khai**: Nginx, VPS
 
-## 🚀 Cài đặt & chạy ứng dụng
+# Thử nghiệm và huấn luyện mô hình
 
-### 1. Clone project
+Trong nghiên cứu này, để áp dụng mô hình phù hợp vào hệ thống phòng họp trực tuyến, chúng tôi đã đánh giá một số mô hình hỗ trợ tiếng việt như Whisper, PhoWhiser, VietASR được cung cấp mô hình miễn phí. Sau đó, chúng tôi Fine-Tune mô hình tốt nhất với bộ dữ liệu tiếng việt để kết quả được tốt hơn khi áp dụng vào hệ thống.
 
-```bash
-git clone https://github.com/vanquan19/ASR_Meeting_React.git
-cd asr_meeting_react
-```
+Kết quả đánh giá các mô hình như sau
 
-### 2. Cài đặt dependencies
+Model	WER	CER	RTF
+Whisper	37.91	20.35	27.22
+PhoWhisper	37.04	12.31	26.46
+VietASR	50.60	23.40	3.90
+PhoWhisper fine-tuned	10.34	4.59	54.22
 
-```bash
-npm install
-```
+| Model       | WER      | CER      |RTF      |
+|-------------|-------------|-------------|-------------|
+| Whisper  | 37.91  | 20.35  | 27.22  |
+| PhoWhisper  | 37.91  | 20.35  | 27.22  |
+| VietASR  | 37.91  | 20.35  | 27.22  |
+| PhoWhisper fine-tuned  | 37.91  | 20.35  | 27.22  |
 
-### 3. Cấu hình biến môi trường
+## Kết quả thực tế
+Khi áp dụng mô hình PhoWhisper fine-tuned trong hệ thống phòng họp trực tuyến, chúng tôi thấy rằng hệ thống hoạt động ổn định và cho văn bản có độ chính xác cao trong điều kiện họp thực tế. Hệ thống họp đã được triển khai tại  https://virtualsecretary.click/. Hình ảnh thực tế và kết quả nhận diện giọng nói sang văn bản được thể hiện trong ảnh dưới đây.
 
-```bash
-Tạo file .env trong thư mục với nội dung .env.example
-```
-
-### 4. Khởi chạy ứng dụng
-
-```bash
-- Chạy môi trường dev
-npm run dev
-- build ứng dụng
-npm run build
-
-```
+![Alt text](meeting_img.png)
+![Alt text](transcript_word.img)
+![Alt text](transcript_pdf.img)
