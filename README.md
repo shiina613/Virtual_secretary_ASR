@@ -44,5 +44,5 @@ Kết quả đánh giá các mô hình như sau
 Khi áp dụng mô hình PhoWhisper fine-tuned trong hệ thống phòng họp trực tuyến, chúng tôi thấy rằng hệ thống hoạt động ổn định và cho văn bản có độ chính xác cao trong điều kiện họp thực tế. Hệ thống họp đã được triển khai tại  https://virtualsecretary.click/. Hình ảnh thực tế và kết quả nhận diện giọng nói sang văn bản được thể hiện trong ảnh dưới đây.
 
 ![Alt text](meeting_img.png)
-![Alt text](transcript_word.img)
-![Alt text](transcript_pdf.img)
+![Alt text](transcript_word.png)
+![Alt text](transcript_pdf.png)
