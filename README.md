@@ -33,12 +33,6 @@ Trong nghiên cứu này, để áp dụng mô hình phù hợp vào hệ thốn
 
 Kết quả đánh giá các mô hình như sau
 
-Model	WER	CER	RTF
-Whisper	37.91	20.35	27.22
-PhoWhisper	37.04	12.31	26.46
-VietASR	50.60	23.40	3.90
-PhoWhisper fine-tuned	10.34	4.59	54.22
-
 | Model       | WER      | CER      |RTF      |
 |-------------|-------------|-------------|-------------|
 | Whisper  | 37.91  | 20.35  | 27.22  |
