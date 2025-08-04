@@ -36,9 +36,9 @@ Kết quả đánh giá các mô hình như sau
 | Model       | WER      | CER      |RTF      |
 |-------------|-------------|-------------|-------------|
 | Whisper  | 37.91  | 20.35  | 27.22  |
-| PhoWhisper  | 37.91  | 20.35  | 26.46  |
-| VietASR  | 37.91  | 20.35  | 3.90  |
-| PhoWhisper fine-tuned  | 37.91  | 20.35  | 54.22  |
+| PhoWhisper  | 37.04  | 12.31  | 26.46  |
+| VietASR  | 50.60  | 23.40  | 3.90  |
+| PhoWhisper fine-tuned  | 10.34  | 4.59  | 54.22  |
 
 ## Kết quả thực tế
 Khi áp dụng mô hình PhoWhisper fine-tuned trong hệ thống phòng họp trực tuyến, chúng tôi thấy rằng hệ thống hoạt động ổn định và cho văn bản có độ chính xác cao trong điều kiện họp thực tế. Hệ thống họp đã được triển khai tại  https://virtualsecretary.click/. Hình ảnh thực tế và kết quả nhận diện giọng nói sang văn bản được thể hiện trong ảnh dưới đây.
