@@ -22,7 +22,7 @@ Trong nghiên cứu này, chúng tôi xây dựng ứng dụng phòng họp tr�
 
 - **Frontend**: ReactJS + TypeScript + TailwindCSS
 - **Backend**: Spring Boot
-- **AI**: Whisper, Python
+- **AI**: PhoWhisper fine-tuned
 - **Giao tiếp thời gian thực**: WebRTC, Websocket / STOMP
 - **Xác thực**: JWT
 - **Triển khai**: Nginx, VPS
